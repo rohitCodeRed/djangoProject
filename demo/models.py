@@ -10,3 +10,5 @@ class Book(models.Model):
     is_published = models.BooleanField(default=False)
     cover = models.ImageField(upload_to='covers/', blank=True)
 
+    def __str__(self):
+        return self.title
